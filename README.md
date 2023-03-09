@@ -28,7 +28,3 @@
 > I build and installed this app using Android Studio Dolphin | 2021.3.1 (Sep 2022).
 
 > This app can be built and run successfully if the above dependencies are enabled.
-
-## Owners
-
-> This software is owned by Udacity as a starter code and I do my own design and logic, See [Code Owners](https://github.com/hady993/nd940-android-kotlin-course1-starter-master/CODEOWNERS) for more information ©HadyAshraf.

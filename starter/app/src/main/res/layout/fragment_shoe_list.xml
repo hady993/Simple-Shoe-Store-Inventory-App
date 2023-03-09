@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- * Step4.2: To setup the DataBindingUtil, we must add the <layout/> tag!
+     * Step5.1: Creating Fragments is mandatory before using binding for inflation!
+     * Step11.1: Create a new Shoe List destination. -->
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- This is a view group! -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fatherLayoutFragmentShoeList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.shoescreens.ShoeListFragment">
+
+        <!-- Step11.2: ScrollView to scroll the items. -->
+        <ScrollView
+            android:id="@+id/scrollViewFragmentShoeList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Step11.3: LinearLayout for Shoe item. -->
+            <LinearLayout
+                android:id="@+id/itemLayoutFragmentShoeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+        </ScrollView>
+
+        <!-- Step11.4: FloatingActionButton with an action to navigate to the shoe detail screen. -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addShoeButtonFragmentShoeList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:layout_marginBottom="@dimen/tinyDistance"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/fatherLayoutFragmentShoeList"
+            app:layout_constraintEnd_toEndOf="@+id/fatherLayoutFragmentShoeList"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/fatherLayoutFragmentShoeList"
+            app:layout_constraintTop_toTopOf="@id/fatherLayoutFragmentShoeList"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

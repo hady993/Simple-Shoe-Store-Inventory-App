@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- * Step4.2: To setup the DataBindingUtil, we must add the <layout/> tag!
+     * Step5.1: Creating Fragments is mandatory before using binding for inflation!
+     * Step9.1: Create a new instructions destination! -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- This is a view group! -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.instructions.InstructionsFragment">
+
+        <!-- Step9.2: Title TextView. -->
+        <TextView
+            android:id="@+id/titleTextFragmentInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions_title_frag_instructions"
+            android:textSize="@dimen/largeTitleTextSize"
+            app:layout_constraintBottom_toTopOf="@+id/instructionsTextFragmentInstructions"
+            app:layout_constraintEnd_toEndOf="@+id/instructionsTextFragmentInstructions"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/instructionsTextFragmentInstructions"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Step9.2: Instructions TextView. -->
+        <TextView
+            android:id="@+id/instructionsTextFragmentInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:text="@string/instructions_msg_frag_instructions"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/shoeListButtonFragmentInstructions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextFragmentInstructions" />
+
+        <!-- Step9.2: ShoeList Button for navigation. -->
+        <Button
+            android:id="@+id/shoeListButtonFragmentInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_list_frag_instructions"
+            android:textSize="@dimen/buttonTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/instructionsTextFragmentInstructions"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/instructionsTextFragmentInstructions"
+            app:layout_constraintTop_toBottomOf="@+id/instructionsTextFragmentInstructions" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

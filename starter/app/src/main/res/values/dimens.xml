@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="largeTitleTextSize">48sp</dimen>
+    <dimen name="buttonTextSize">24sp</dimen>
+
+    <dimen name="tinyDistance">25dp</dimen>
+    <dimen name="shortDistance">50dp</dimen>
+    <dimen name="longDistance">100dp</dimen>
+</resources>

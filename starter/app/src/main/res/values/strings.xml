@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- The App Name String. -->
+    <string name="app_name">Shoe Store</string>
+
+    <!-- The Login Fragment Strings. -->
+    <string name="login_frag_login">LOGIN</string>
+    <string name="email_frag_login">Email</string>
+    <string name="email_hint_frag_login">Enter Your Email!</string>
+    <string name="password_frag_login">Password</string>
+    <string name="password_hint_frag_login">Enter Your Password!</string>
+    <string name="register_frag_login">Register</string>
+
+    <!-- The Welcome Fragment Strings. -->
+    <string name="welcome_title_frag_welcome">WELCOME</string>
+    <string name="instructions_frag_welcome">INSTRUCTIONS</string>
+    <string name="welcome_msg_frag_welcome">Welcome to our cute shoe store! Hooray!
+        \nJust press the button below to see the instructions.</string>
+
+    <!-- The Instructions Fragment Strings. -->
+    <string name="instructions_title_frag_instructions">INSTRUCTIONS</string>
+    <string name="shoe_list_frag_instructions">SHOE LIST</string>
+    <string name="instructions_msg_frag_instructions">To use our shoe store, you should follow these instructions:
+        \n1. Press the SHOE LIST button to go to the shoe list page.
+        \n2. Scroll the list as you like to see the different kinds of shoes.
+        \n3. If you want to add a new shoe to the list, just press the SHOE DETAIL button.
+        \n4. In the shoe detail page you can input the details and press the ADD button to add it to the list.</string>
+
+    <!-- The Logout Menu Item Strings -->
+    <string name="logout">Logout</string>
+
+    <!-- The ShoeDetails Fragment Strings. -->
+    <string name="shoe_name_text_view">Shoe Name</string>
+    <string name="company_text_view">Company</string>
+    <string name="shoe_size_text_view">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="add_button">Add</string>
+    <string name="shoe_name_hint">Enter Shoe Name</string>
+    <string name="shoe_size_hint">Enter Shoe Size</string>
+    <string name="company_name_hint">Enter Company Name</string>
+    <string name="description_hint">Enter Shoe Description</string>
+
+</resources>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- * Step4.2: To setup the DataBindingUtil, we must add the <layout/> tag!
+     * Step5.1: Creating Fragments is mandatory before using binding for inflation!
+     * Step14.1: Create a new shoe details destination! -->
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Let's add data variables! -->
+    <data>
+
+        <!-- * Step14.12: Create a shoeViewModel data variable for the two_way binding! -->
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.screens.shoescreens.ShoeViewModel" />
+
+        <!-- * Step14.13: Create a shoeDetails data variable for the two_way binding! -->
+        <variable
+            name="shoeDetails"
+            type="com.udacity.shoestore.models.Shoe" />
+
+    </data>
+
+    <!-- This is a view group! -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.shoescreens.ShoeDetailsFragment">
+
+        <!-- * Step14.2: Save Button for adding new shoe and navigating back to the Shoe List.
+             * Step14.14: Using the setter (), call addShoe() to add an item after the button click. -->
+        <Button
+            android:id="@+id/addButtonFragmentShoeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shortDistance"
+            android:text="@string/add_button"
+            android:textSize="@dimen/buttonTextSize"
+            android:onClick="@{ () -> shoeViewModel.addShoe(shoeDetails.name, shoeDetails.size, shoeDetails.company, shoeDetails.description)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintStart_toStartOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+        <!-- Step14.3: Cancel Button for navigating back to the Shoe List, without adding anything. -->
+        <Button
+            android:id="@+id/cancelButtonFragmentShoeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:textSize="@dimen/buttonTextSize"
+            app:layout_constraintBaseline_toBaselineOf="@+id/addButtonFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintStart_toStartOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+        <!-- * Step14.4: Shoe Name EditText for adding new shoe name.
+             * Step14.15: Use text="@={}" to apply a two_way data binding (get the data from the layout). -->
+        <EditText
+            android:id="@+id/shoeNameEditFragmentShoeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/shoe_name_hint"
+            android:textSize="20sp"
+            android:text="@={shoeDetails.name}"
+            app:layout_constraintBottom_toTopOf="@+id/shoeSizeTextFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeNameTextFragmentShoeDetails" />
+
+        <!-- * Step14.5: Shoe Size EditText for adding new shoe size.
+             * Step14.15: Use text="@={}" to apply a two_way data binding (get the data from the layout). -->
+        <EditText
+            android:id="@+id/shoeSizeEditFragmentShoeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="@string/shoe_size_hint"
+            android:textSize="20sp"
+            android:text="@={shoeDetails.size}"
+            app:layout_constraintBottom_toTopOf="@+id/companyTextFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeTextFragmentShoeDetails"
+            tools:ignore="TextFields" />
+
+        <!-- * Step14.6: Company EditText for adding new company name.
+             * Step14.15: Use text="@={}" to apply a two_way data binding (get the data from the layout). -->
+        <EditText
+            android:id="@+id/companyEditFragmentShoeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/company_name_hint"
+            android:textSize="20sp"
+            android:text="@={shoeDetails.company}"
+            app:layout_constraintBottom_toTopOf="@+id/descriptionTextFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyTextFragmentShoeDetails" />
+
+        <!-- * Step14.7: Description EditText for adding new shoe description.
+             * Step14.15: Use text="@={}" to apply a two_way data binding (get the data from the layout). -->
+        <EditText
+            android:id="@+id/descriptionEditFragmentShoeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/description_hint"
+            android:textSize="20sp"
+            android:text="@={shoeDetails.description}"
+            app:layout_constraintBottom_toTopOf="@+id/addButtonFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTextFragmentShoeDetails" />
+
+        <!-- Step14.8: Shoe Name TextView. -->
+        <TextView
+            android:id="@+id/shoeNameTextFragmentShoeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_name_text_view"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/shoeNameEditFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="@+id/shoeNameEditFragmentShoeDetails"
+            app:layout_constraintStart_toStartOf="@+id/shoeNameEditFragmentShoeDetails"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Step14.9: Shoe Size TextView. -->
+        <TextView
+            android:id="@+id/shoeSizeTextFragmentShoeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tinyDistance"
+            android:text="@string/shoe_size_text_view"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/shoeSizeEditFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="@+id/shoeSizeEditFragmentShoeDetails"
+            app:layout_constraintStart_toStartOf="@+id/shoeSizeEditFragmentShoeDetails"
+            app:layout_constraintTop_toBottomOf="@+id/shoeNameEditFragmentShoeDetails"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <!-- Step14.10: Company TextView. -->
+        <TextView
+            android:id="@+id/companyTextFragmentShoeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tinyDistance"
+            android:text="@string/company_text_view"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/companyEditFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="@+id/companyEditFragmentShoeDetails"
+            app:layout_constraintStart_toStartOf="@+id/companyEditFragmentShoeDetails"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeEditFragmentShoeDetails"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <!-- Step14.11: Description TextView. -->
+        <TextView
+            android:id="@+id/descriptionTextFragmentShoeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tinyDistance"
+            android:text="@string/description"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintEnd_toEndOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintStart_toStartOf="@+id/descriptionEditFragmentShoeDetails"
+            app:layout_constraintTop_toBottomOf="@+id/companyEditFragmentShoeDetails"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

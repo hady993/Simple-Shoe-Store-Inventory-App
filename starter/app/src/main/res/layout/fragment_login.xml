@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- * Step4.2: To setup the DataBindingUtil, we must add the <layout/> tag!
+     * Step5.1: Creating Fragments is mandatory before using binding for inflation!
+     * Step7.1: Create a new login destination! -->
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- This is a view group! -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.login.LoginFragment">
+
+        <!-- Step7.2: Login Button for logging in and navigation. -->
+        <Button
+            android:id="@+id/loginButtonFragmentLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tinyDistance"
+            android:text="@string/login_frag_login"
+            android:textSize="@dimen/buttonTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/passwordEditFragmentLogin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/passwordEditFragmentLogin"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditFragmentLogin"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <!-- Step7.2: Register Button for registration in and navigation. -->
+        <Button
+            android:id="@+id/registerButtonFragmentLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_frag_login"
+            android:textSize="@dimen/buttonTextSize"
+            app:layout_constraintBaseline_toBaselineOf="@+id/loginButtonFragmentLogin"
+            app:layout_constraintEnd_toEndOf="@+id/passwordEditFragmentLogin"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/passwordEditFragmentLogin" />
+
+        <!-- Step7.3: Email EditText to enter the email. -->
+        <EditText
+            android:id="@+id/emailEditFragmentLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:ems="10"
+            android:hint="@string/email_hint_frag_login"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/passwordTextFragmentLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextFragmentLogin"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <!-- Step7.3: Password EditText to enter the password. -->
+        <EditText
+            android:id="@+id/passwordEditFragmentLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:ems="10"
+            android:hint="@string/password_hint_frag_login"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/loginButtonFragmentLogin"
+            app:layout_constraintEnd_toEndOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextFragmentLogin"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <!-- Step7.4: Email TextView. -->
+        <TextView
+            android:id="@+id/emailTextFragmentLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/longDistance"
+            android:text="@string/email_frag_login"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintEnd_toEndOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextFragmentLogin"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Step7.4: Title TextView (optional for the decoration of the login page). -->
+        <TextView
+            android:id="@+id/titleTextFragmentLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_frag_login"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/largeTitleTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/emailTextFragmentLogin"
+            app:layout_constraintEnd_toEndOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintStart_toStartOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Step7.4: Password TextView. -->
+        <TextView
+            android:id="@+id/passwordTextFragmentLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shortDistance"
+            android:text="@string/password_frag_login"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/passwordEditFragmentLogin"
+            app:layout_constraintEnd_toEndOf="@+id/passwordEditFragmentLogin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/passwordEditFragmentLogin"
+            app:layout_constraintTop_toBottomOf="@+id/emailEditFragmentLogin"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

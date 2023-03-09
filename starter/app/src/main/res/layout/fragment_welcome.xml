@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- * Step4.2: To setup the DataBindingUtil, we must add the <layout/> tag!
+     * Step5.1: Creating Fragments is mandatory before using binding for inflation!
+     * Step8.1: Create a new welcome screen destination! -->
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- This is a view group! -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.welcome.WelcomeFragment">
+
+        <!-- Step8.2: Title TextView. -->
+        <TextView
+            android:id="@+id/titleTextFragmentWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shortDistance"
+            android:text="@string/welcome_title_frag_welcome"
+            android:textSize="@dimen/largeTitleTextSize"
+            app:layout_constraintBottom_toTopOf="@+id/imageShoeFragmentWelcome"
+            app:layout_constraintEnd_toEndOf="@+id/welcomeTextFragmentWelcome"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTextFragmentWelcome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Step8.2: Welcome TextView. -->
+        <TextView
+            android:id="@+id/welcomeTextFragmentWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tinyDistance"
+            android:layout_marginEnd="@dimen/tinyDistance"
+            android:text="@string/welcome_msg_frag_welcome"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/instructionsButtonFragmentWelcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageShoeFragmentWelcome" />
+
+        <!-- Step8.3: Instructions Button for navigation. -->
+        <Button
+            android:id="@+id/instructionsButtonFragmentWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions_frag_welcome"
+            android:textSize="@dimen/buttonTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/welcomeTextFragmentWelcome"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTextFragmentWelcome"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTextFragmentWelcome" />
+
+        <ImageView
+            android:id="@+id/imageShoeFragmentWelcome"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/welcomeTextFragmentWelcome"
+            app:layout_constraintEnd_toEndOf="@+id/welcomeTextFragmentWelcome"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTextFragmentWelcome"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextFragmentWelcome"
+            app:srcCompat="@drawable/shoes_welcome" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

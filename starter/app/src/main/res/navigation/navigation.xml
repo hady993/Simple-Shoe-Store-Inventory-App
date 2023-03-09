@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- * Step6.1: Adding the navigation graph resource.
+     * Step6.2: Adding the NavHostFragment (in the activity_main).
+     * Step6.3: Adding fragments to the navigation graph.
+     * Step6.4: Connecting fragments in the graph with actions.
+     * Step6.5: Create onClickListener in kotlin code to do the navigation action.
+     * Step6.6: Find the Navigation Controller.
+     * Step6.7: Navigate with your action. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Our Login Page! -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.udacity.shoestore.screens.login.LoginFragment"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+
+    <!-- Our Welcome Page! -->
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.screens.welcome.WelcomeFragment"
+        android:label="Welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+
+    <!-- Our Instructions Page! -->
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.udacity.shoestore.screens.instructions.InstructionsFragment"
+        android:label="Instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Our Shoe List Page! -->
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="com.udacity.shoestore.screens.shoescreens.ShoeListFragment"
+        android:label="Shoe List" >
+        <action
+            android:id="@+id/action_shoeListFragment_to_shoeDetailsFragment"
+            app:destination="@id/shoeDetailsFragment"
+            app:popUpTo="@id/shoeListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <!-- Our Shoe Details Page! -->
+    <fragment
+        android:id="@+id/shoeDetailsFragment"
+        android:name="com.udacity.shoestore.screens.shoescreens.ShoeDetailsFragment"
+        android:label="Shoe Details" />
+</navigation>

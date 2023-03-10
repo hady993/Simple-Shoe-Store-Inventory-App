@@ -2,12 +2,12 @@
 
 > In this project, there were applied basic Android skills in building layouts and navigation files by building a simple Shoe Store app.
 
-> This project consists of five screens:
-	* Login screen: Email and password fields and labels plus login buttons.
-	* Welcome onboarding screen.
-	* Instructions onboarding screen.
-	* Shoe Listing screen.
-	* Shoe Detail screen for adding a new shoe.
+This project consists of five screens:
+ - Login screen: Email and password fields and labels plus login buttons.
+ - Welcome onboarding screen.
+ - Instructions onboarding screen.
+ - Shoe Listing screen.
+ - Shoe Detail screen for adding a new shoe.
 
 ## Getting Started
 
@@ -19,9 +19,9 @@
 
 > This app is working on Android versions from Android 5.1 (Lollipop) to Android 12 (API levels 31, 32).
 
-> Gradle Versions:
-	- Android Gradle Plugin Version: 4.0.1
-	- Gradle Version: 6.1.1
+Gradle Versions:
+ - Android Gradle Plugin Version: 4.0.1
+ - Gradle Version: 6.1.1
 
 ### Installation
 

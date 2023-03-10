@@ -2,12 +2,12 @@
 
 > In this project, there were applied basic Android skills in building layouts and navigation files by building a simple Shoe Store app.
 
-> This project consists of five screens:
-	- Login screen: Email and password fields and labels plus login buttons.
-	- Welcome onboarding screen.
-	- Instructions onboarding screen.
-	- Shoe Listing screen.
-	- Shoe Detail screen for adding a new shoe.
+> This project consists of five screens:;
+	- Login screen: Email and password fields and labels plus login buttons.;
+	- Welcome onboarding screen.;
+	- Instructions onboarding screen.;
+	- Shoe Listing screen.;
+	- Shoe Detail screen for adding a new shoe.;
 
 ## Getting Started
 

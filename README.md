@@ -17,7 +17,7 @@ This project consists of five screens:
 
 ### Dependencies
 
-> This app is working on Android versions from Android 5.1 (Lollipop) to Android 12 (API levels 31, 32).
+> This app is working on Android versions from Android 5.1 (Lollipop) to Android 12 (Snow Cone).
 
 Gradle Versions:
  - Android Gradle Plugin Version: 4.0.1

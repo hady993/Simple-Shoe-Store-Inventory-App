@@ -1,4 +1,4 @@
-# Build a Shoe Store Inventory App
+# Simple Shoe Store Inventory App
 
 > In this project, there were applied basic Android skills in building layouts and navigation files by building a simple Shoe Store app.
 

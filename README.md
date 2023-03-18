@@ -31,4 +31,4 @@ Gradle Versions:
 
 ### Project Screens' Images
 
-![My Image](D:/Courses/Advanced Android Kotlin Development Nanodegree/2_Developing Android Apps with Kotlin - Part 1/Building an Android App/Project Pics/1.png)
+![My Image](D:\Courses\Advanced Android Kotlin Development Nanodegree\2_Developing Android Apps with Kotlin - Part 1\Building an Android App\Project Pics\1.png)

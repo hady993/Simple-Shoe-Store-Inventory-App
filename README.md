@@ -28,3 +28,7 @@ Gradle Versions:
 > I build and installed this app using Android Studio Dolphin | 2021.3.1 (Sep 2022).
 
 > This app can be built and run successfully if the above dependencies are enabled.
+
+### Project Screens' Images
+
+![My Image](D:/Courses/Advanced Android Kotlin Development Nanodegree/2_Developing Android Apps with Kotlin - Part 1/Building an Android App/Project Pics/1.png)
